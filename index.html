@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marc Jm Arabejo — Portfolio</title>
+  <link rel="icon" type="image/jpg" href="img/wew.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════
+       CURSOR
+  ════════════════════════════════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ═══════════════════════════════════
+       INTRO OVERLAY
+  ════════════════════════════════════ -->
+  <div id="intro-overlay">
+    <div class="intro-noise"></div>
+    <div class="intro-inner">
+      <div class="intro-label">// INITIALIZING</div>
+      <div class="intro-name-wrap">
+        <div class="intro-name" id="introName">
+          <span class="intro-char" style="--i:0">M</span><span class="intro-char" style="--i:1">A</span><span class="intro-char" style="--i:2">R</span><span class="intro-char" style="--i:3">C</span>
+        </div>
+        <div class="intro-name intro-name-sub" id="introNameSub">
+          <span class="intro-char" style="--i:0">A</span><span class="intro-char" style="--i:1">R</span><span class="intro-char" style="--i:2">A</span><span class="intro-char" style="--i:3">B</span><span class="intro-char" style="--i:4">E</span><span class="intro-char" style="--i:5">J</span><span class="intro-char" style="--i:6">O</span>
+        </div>
+      </div>
+      <div class="intro-divider"></div>
+      <div class="intro-roles">
+        <span class="intro-role" style="--d:0.6s">PROGRAMMER</span>
+        <span class="intro-sep">×</span>
+        <span class="intro-role" style="--d:0.8s">GRAPHIC DESIGNER</span>
+        <span class="intro-sep">×</span>
+        <span class="intro-role" style="--d:1s">ENGINEER</span>
+      </div>
+      <div class="intro-bar-wrap">
+        <div class="intro-bar" id="introBar"></div>
+        <div class="intro-bar-pct" id="introBarPct">0%</div>
+      </div>
+    </div>
+    <div class="intro-year">2025</div>
+  </div>
+
+  <!-- ═══════════════════════════════════
+       ANIMATED EARTH BACKGROUND
+  ════════════════════════════════════ -->
+  <canvas id="earth-canvas"></canvas>
+
+  <!-- ═══════════════════════════════════
+       TOP NAV
+  ════════════════════════════════════ -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="navLogo">
+        <img src="img/pf.jpg" alt="Marc JM Logo" class="logo-img">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a class="nav-link active" data-section="about"        href="#about">About</a></li>
+        <li><a class="nav-link"        data-section="projects"     href="#projects">Projects</a></li>
+        <li><a class="nav-link"        data-section="services"     href="#services">Services</a></li>
+        <li><a class="nav-link"        data-section="certificates" href="#certificates">Certification</a></li>
+        <li><a class="nav-link"        data-section="contact"      href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Get in touch <span class="nav-cta-arrow">→</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════
+       MAIN
+  ════════════════════════════════════ -->
+  <main class="main" id="main-container">
+    <div id="loader" class="page-loader">
+      <span>loading</span><span class="loader-dots"><span>.</span><span>.</span><span>.</span></span>
+    </div>
+  </main>
+
+  <!-- PROJECT MODAL -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-box">
+      <div class="modal-img-wrap">
+        <img src="" alt="Project" class="modal-img" id="modalImg">
+        <div class="modal-dots" id="modalDots"></div>
+        <button class="modal-close" id="modalClose" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="modal-body">
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div class="modal-description" id="modalDesc"></div>
+        <a href="#" class="modal-btn-dl" id="modalDownload" target="_blank">↗ Download / View Project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERT MODAL -->
+  <div class="cert-modal-overlay" id="certModal">
+    <button class="cert-close" id="certClose" aria-label="Close">&#x2715;</button>
+    <img src="" alt="Certificate" class="cert-modal-img" id="certModalImg">
+  </div>
+
+  <script src="js/earth.js" defer></script>
+  <script src="js/loader.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
