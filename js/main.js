@@ -5,12 +5,51 @@
 
 /* ── PROJECT DATA ── */
 const PROJECTS = [
-  { id: 1, title: "Banking System", description: "Banks all over the world face a common problem...", images: ["img/project/banking/bs.png","img/project/banking/bs2.png","img/project/banking/bs3.png","img/project/banking/bs4.png","img/project/banking/bs5.png","img/project/banking/bs6.png"], downloadLink: "https://drive.google.com/file/d/1eUyo_EvlbNX8AaGStpk5JKFVqs8DQKOK/view?usp=sharing" },
-  { id: 2, title: "Capsphere", description: "Capsphere is a dedicated platform designed to bridge the gap...", images: ["img/project/capsphere/cp.png","img/project/capsphere/cp2.png","img/project/capsphere/cp3.png","img/project/capsphere/cp4.png","img/project/capsphere/cp5.png","img/project/capsphere/cp6.png"], downloadLink: "https://drive.google.com/drive/folders/1NE4KMzLYOj_3jpp7xVKzzcHYtqcS4nUh?usp=drive_link" },
-  { id: 3, title: "Bol.Anon Hub", description: "Welcome to Bol.Anon HUB — a dedicated resource...", images: ["img/project/bis/bh.png","img/project/bis/bh1.png","img/project/bis/bh6.png","img/project/bis/bh3.png","img/project/bis/bh4.png","img/project/bis/bh5.png"], downloadLink: "files/project3.zip" },
-  { id: 4, title: "Numerical Method Calculator — Python", description: `A Python-based application... <a href="https://drive.google.com/file/d/1WrhhBSUUrxC8hAnvfND6L08UNA6rpXjh/view?usp=sharing" target="_blank">View Documentation</a><br><iframe height="300" src="https://www.youtube.com/embed/_Aq6p4mBxbY?si=GGeEo0MYSK1MBFO6" frameborder="0" allowfullscreen></iframe>`, images: ["img/py/1.png","img/py/2.png","img/py/3.png","img/py/4.png","img/py/5.png","img/py/6.png","img/py/7.png","img/py/8.png"], downloadLink: "https://github.com/Snshinegurl/NumericalMethod_RootFinder.git" },
-  { id: 5, title: "Numerical Method Calculator — MATLAB", description: `A MATLAB Root Finder Tool... <a href="https://drive.google.com/file/d/1FYXZwoV3cnXhgzO3_LOyUG7mBb8yLv5C/view?usp=sharing" target="_blank">View Documentation</a><br><iframe height="300" src="https://www.youtube.com/embed/-fRvGHAxTdQ?si=ibjii_k4_iszQHhJ" frameborder="0" allowfullscreen></iframe>`, images: ["img/MAT/1.png","img/MAT/2.png","img/MAT/3.png","img/MAT/4.png","img/MAT/5.png","img/MAT/6.png"], downloadLink: "files/project4.zip" },
-  { id: 6, title: "Sumubot", description: `A Sumobot designed to push opponents... <a href="https://drive.google.com/file/d/15BjLp-cxKn1R2CR79aoBtncsf2EkbyhH/view?usp=sharing" target="_blank">View Documentation</a><br><iframe height="300" src="https://www.youtube.com/embed/I_05BunfV-c?si=8WJV3aIvjpXXVYBI&start=11" frameborder="0" allowfullscreen></iframe>`, images: ["img/Sumo/1.png","img/Sumo/2.png","img/Sumo/3.png","img/Sumo/4.png"], downloadLink: "files/project4.zip" },
+        { 
+            id: 1, 
+            title: "Banking System", 
+            description: "Banks all over the world are facing a common problem with how to manage the customers' needs, especially with the convenience of the customers. The manual way of depositing and withdrawing money, checking and managing a person's bank account is inefficient, not just takes an intensive time but also has the chance of human error. Finding a new way of managing a bank is more crucial than ever.", 
+            images: ["img/project/banking/bs.png", "img/project/banking/bs2.png", "img/project/banking/bs3.png", "img/project/banking/bs4.png", "img/project/banking/bs5.png", "img/project/banking/bs6.png"], 
+            downloadLink: "https://drive.google.com/file/d/1eUyo_EvlbNX8AaGStpk5JKFVqs8DQKOK/view?usp=sharing" 
+        },
+        { 
+            id: 2, 
+            title: "Capsphere", 
+            description: "Capsphere is a dedicated platform designed to bridge this gap, offering a seamless, user-friendly solution for artists to display their work and for clients to discover and hire creative professionals.", 
+            images: ["img/project/capsphere/cp.png", "img/project/capsphere/cp2.png", "img/project/capsphere/cp3.png", "img/project/capsphere/cp4.png", "img/project/capsphere/cp5.png", "img/project/capsphere/cp6.png"], 
+            downloadLink: "https://drive.google.com/drive/folders/1NE4KMzLYOj_3jpp7xVKzzcHYtqcS4nUh?usp=drive_link" 
+        },
+        { 
+            id: 3, 
+            title: "Bol.Anon Hub", 
+            description: "Welcome to Bol.Anon HUB, your dedicated resource for the Bol.anon Bisaya language from Bohol. Explore a comprehensive dictionary and translation platform that showcases the unique words and phrases of Bol.anon Bisaya. Whether you're a native speaker, learner, or simply curious, Bol.Anon HUB connects you to the rich linguistic heritage of Bohol, offering accurate translations and insights into this beautiful dialect.", 
+            images: ["img/project/bis/bh.png", "img/project/bis/bh1.png", "img/project/bis/bh6.png",  "img/project/bis/bh3.png", "img/project/bis/bh4.png", "img/project/bis/bh5.png"], 
+            downloadLink: "files/project3.zip" 
+        },
+        { 
+            id: 4, 
+            title: "NUMERICAL METHOD CALCULATOR - PYTHON", 
+         description: `The Numerical Method Root Finder Calculator is a Python-based application developed to solve nonlinear equations through classical numerical techniques. It offers a suite of methods including the Bisection Method, Newton-Raphson Method, Regula Falsi, Secant Method, Incremental Search, and the Graphical Method. Users can input mathematical functions as string expressions, which are then processed and evaluated using secure and efficient libraries. The system is designed to handle a wide variety of mathematical expressions, including polynomial and transcendental equations, while supporting features like root refinement, multiple root detection, and error handling. <a href="https://drive.google.com/file/d/1WrhhBSUUrxC8hAnvfND6L08UNA6rpXjh/view?usp=sharing" target="_blank">View Documentation</a>
+        <br><iframe width="760" height="380" src="https://www.youtube.com/embed/_Aq6p4mBxbY?si=GGeEo0MYSK1MBFO6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`, 
+            images: ["img/py/1.png", "img/py/2.png", "img/py/3.png", "img/py/4.png", "img/py/5.png", "img/py/6.png", "img/py/7.png", "img/py/8.png"], 
+            downloadLink: "https://github.com/Snshinegurl/NumericalMethod_RootFinder.git" 
+        },
+        { 
+            id: 5, 
+            title: "NUMERICAL METHOD CALCULATOR - MATLAB", 
+         description: `The MATLAB Root Finder Tool is an educational numerical analysis application that implements six classical root-finding methods (Graphical, Incremental Search, Bisection, Newton-Raphson, Regula Falsi, and Secant) to solve nonlinear equations. Designed for students and engineers, it provides an interactive console interface for inputting functions (including trigonometric, exponential, and polynomial expressions) and outputs detailed results with step-by-step iteration tables, error analysis, and visual plots of the function with identified roots. The tool emphasizes both computational accuracy and pedagogical clarity, enabling users to compare method performance and understand convergence behaviors. With its modular class structure and support for symbolic differentiation, it serves as a practical platform for learning numerical methods while offering potential for future expansion through additional algorithms and GUI enhancements. <a href="https://drive.google.com/file/d/1FYXZwoV3cnXhgzO3_LOyUG7mBb8yLv5C/view?usp=sharing" target="_blank">View Documentation</a> .
+        <br><iframe width="760" height="380" src="https://www.youtube.com/embed/-fRvGHAxTdQ?si=ibjii_k4_iszQHhJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> `, 
+            images: ["img/MAT/1.png", "img/MAT/2.png", "img/MAT/3.png", "img/MAT/4.png", "img/MAT/5.png", "img/MAT/6.png"], 
+            downloadLink: "files/project4.zip" 
+        },
+        { 
+            id: 6, 
+            title: "SUMUBOT", 
+         description: `A Sumobot is a machine that pushes the opponent or another bot, out of a circular ring. It is equipped with components such as, Ultrasonic Sensor for detecting other bots, IR sensor for Identifying the surface color in order for the bot to stay in the ring, Motors attached to the wheel for the bot to move, Motor Driver to control the direction of the bot, battery for power and Microcontroller acting as the brain of the bot.<a href="https://drive.google.com/file/d/15BjLp-cxKn1R2CR79aoBtncsf2EkbyhH/view?usp=sharing" target="_blank">View Documentation</a>
+        <br><iframe width="760" height="380" src="https://www.youtube.com/embed/I_05BunfV-c?si=8WJV3aIvjpXXVYBI&amp;start=11" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <br>`, 
+            images: ["img/Sumo/1.png", "img/Sumo/2.png", "img/Sumo/3.png", "img/Sumo/4.png"], 
+            downloadLink: "files/project4.zip" 
+        },
   { id: 7, title: "Ball Balancing", description: "Development of a high-precision Ball Balancer utilizing a manual PID control scheme.", images: ["img/project/BallBalance/bbalance.png"], downloadLink: "https://docs.google.com/document/d/186FW7pZF0XCeJ49c8CakDykrP2cqc_eB/edit?usp=sharing" },
   { id: 8, title: "Smart Greenhouse Automation", description: "Environmental greenhouse monitoring with flexible automated and manual control.", images: ["img/project/GreenHouse/2.png","img/project/GreenHouse/1.png","img/project/GreenHouse/3.png"], downloadLink: "https://drive.google.com/file/d/1R-9wJStSMps9qDWJl_t-FS63X8jAqeBq/view?usp=sharing" },
   { id: 9, title: "3-bit to 16-Segment Decoder", description: "Engineered discrete logic to display each unique character of my name on 16-segment LEDs.", images: ["img/project/3bit/1.png","img/project/3bit/2.png","img/project/3bit/3.png"], downloadLink: "https://drive.google.com/file/d/1hVsupnFGpS4O5fJPeVZy8QyiheNHzsH4/view?usp=sharing" }
