@@ -78,7 +78,7 @@ function initCursor() {
   }
   animateFollower();
 
-  document.querySelectorAll('a, button, .project-card, .cert-card, .service-card').forEach(el => {
+  document.querySelectorAll('a, button, .project-card, .cert-card, .graphic-card, .service-card').forEach(el => {
     el.addEventListener('mouseenter', () => cursor.style.transform = 'translate(-50%,-50%) scale(2)');
     el.addEventListener('mouseleave', () => cursor.style.transform = 'translate(-50%,-50%) scale(1)');
   });
@@ -162,7 +162,7 @@ function initScrollReveal() {
         }
 
         // Stagger cards
-        e.target.querySelectorAll('.project-card, .service-card, .cert-card, .detail-card').forEach((card, i) => {
+        e.target.querySelectorAll('.project-card, .service-card, .cert-card, .graphic-card, .detail-card').forEach((card, i) => {
           card.style.opacity = '0';
           card.style.transform = 'translateY(30px)';
           card.style.transition = `opacity 0.6s ease ${0.1 + i * 0.08}s, transform 0.7s cubic-bezier(0.16,1,0.3,1) ${0.1 + i * 0.08}s`;
@@ -278,7 +278,7 @@ function closeCertModal() {
 }
 function initCertModal() {
   document.addEventListener('click', e => {
-    const card = e.target.closest('.cert-card');
+    const card = e.target.closest('.cert-card, .graphic-card');
     if (!card) return;
     const imgSrc = card.dataset.img;
     if (imgSrc) openCertModal(imgSrc);

@@ -773,6 +773,83 @@ section.visible .reveal-child:nth-child(6) { animation-delay: 0.6s; }
 }
 
 /* ============================================================
+   GRAPHICS / PUBMAT SECTION — adaptive bento/masonry
+   (Cards size themselves to each image's own aspect ratio,
+   no cropping — true bento feel for varied pubmat dimensions)
+   ============================================================ */
+#graphics { background: transparent; position: relative; }
+#graphics::before {
+  content: 'GRAPHICS';
+  position: absolute;
+  top: 40px; left: -10px;
+  font-family: var(--display);
+  font-size: clamp(80px, 14vw, 200px);
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255,255,255,0.025);
+  pointer-events: none;
+  z-index: 0;
+  letter-spacing: 4px;
+}
+
+.graphics-grid {
+  column-count: 4;
+  column-gap: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.graphic-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  break-inside: avoid;
+  margin-bottom: 2px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.graphic-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: grayscale(45%) brightness(0.82);
+  transition: transform 0.7s var(--ease), filter 0.5s;
+}
+.graphic-card:hover img {
+  transform: scale(1.04);
+  filter: grayscale(0%) brightness(1);
+}
+
+.graphic-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(30,136,229,0.85) 0%, transparent 55%);
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.graphic-card:hover .graphic-card-overlay { opacity: 1; }
+.graphic-card-overlay span {
+  font-family: var(--display);
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: var(--bg);
+  text-transform: uppercase;
+}
+
+.graphics-hint {
+  margin-top: 24px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+  text-align: center;
+}
+
+/* ============================================================
    SERVICES SECTION
    ============================================================ */
 #services { background: transparent; }
@@ -1285,6 +1362,7 @@ section.visible .reveal-child:nth-child(6) { animation-delay: 0.6s; }
 @media (max-width: 1200px) {
   .project-grid { grid-template-columns: repeat(2, 1fr); }
   .cert-grid { grid-template-columns: repeat(3, 1fr); }
+  .graphics-grid { column-count: 3; }
 }
 @media (max-width: 900px) {
   section { padding: 60px 32px; }
@@ -1295,11 +1373,13 @@ section.visible .reveal-child:nth-child(6) { animation-delay: 0.6s; }
   .services-grid { grid-template-columns: 1fr; }
   .section-title { font-size: 64px; }
   .cert-grid { grid-template-columns: repeat(2, 1fr); }
-  .about-section::before, #projects::before, #services::before { display: none; }
+  .graphics-grid { column-count: 2; }
+  .about-section::before, #projects::before, #services::before, #graphics::before { display: none; }
 }
 @media (max-width: 600px) {
   .project-grid { grid-template-columns: 1fr; }
   .cert-grid { grid-template-columns: 1fr 1fr; }
+  .graphics-grid { column-count: 1; }
   .form-row { grid-template-columns: 1fr; }
   .section-title { font-size: 48px; }
   section { padding: 48px 20px; }
